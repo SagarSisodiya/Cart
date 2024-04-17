@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://sagarsisodiya8:Mclaren%40720s@cluster0.i2obfip.mongodb.net/
+      database: Cart
+      
+producer:
+  cart:
+    destination: cart
+          
+
+      
+server:
+  port: 8083

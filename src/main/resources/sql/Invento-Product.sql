@@ -1,0 +1,21 @@
+CREATE DATABASE invento_product;
+
+USE invento_product;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+drop table product;
+
+CREATE TABLE product (
+	id BIGINT NOT NULL AUTO_INCREMENT,
+    category VARCHAR(128) NOT NULL,
+    brand VARCHAR(128) NOT NULL,
+    spec VARCHAR(128) NOT NULL,
+    deleted INT NOT NULL DEFAULT 0,
+    image_path VARCHAR(128),
+   	created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 CHARSET=latin1;
+
+SET FOREIGN_KEY_CHECKS = 1;
